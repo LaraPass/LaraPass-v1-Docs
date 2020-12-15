@@ -11,7 +11,7 @@ Larapass v1 is a self-hosted personal password manager. It allows you to store y
 
 LaraPass is build using the amazing Laravel PHP Framework. Its completely open source and well documented for anyone to start modifying.
 
-You can access the LaraPass v1 git repo [here](https://github.com/larapass-v1).
+You can access the LaraPass v1 git repo [here](https://github.com/larapass/larapass-v1).
 
 ## MIT License
 
