@@ -1,9 +1,9 @@
 <p align="center"><img src="https://larapass.net/assets/images/v1_logo.png" alt="larapass-v1-logo"></p>
 
 ## Official Documentation Repo (in HTML) for LaraPass v1
-![GitHub release](https://img.shields.io/github/release/larapass/larapass-v1-docs.svg?style=for-the-badge&&colorB=7E57C2)
+![GitHub release](https://img.shields.io/github/v/release/larapass/larapass-v1-docs?logoColor=%237E57C2&style=for-the-badge&&colorB=7E57C2)
 [![GitHub issues](https://img.shields.io/github/issues/larapass/larapass-v1-docs.svg?style=for-the-badge)](https://github.com/spargon/larapass-docs/issues)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/larapass/larapass-v1-docs.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FTechTailor%2FRPG)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/larapass/larapass-v1-docs.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FLaraPass%2FLaraPass-v1)
 
 ## How to Use
 
