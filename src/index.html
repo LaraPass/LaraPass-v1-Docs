@@ -1,0 +1,219 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>LaraPass v1 Personal Version - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="index.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                                <h2>Get Started</h2>
+                                <ul>
+                                    <li class="is-active"><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li><a href="changelog.html">Changelog</a></li>
+                                    <li><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+		            </div>
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>LaraPass v1 Personal Version</h1>
+                        <p>Your Personal Password Manager</p>
+                        <hr>
+                        <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#credits">Credits</a></li>
+                        <li><a href="#contribute">Contribute</a></li>
+                        </ul>
+                        <p><a name="overview"></a></p>
+                        <h2>Overview</h2>
+                        <p><strong>LaraPass v1</strong> is a self-hosted personal password manager that allows you to safely &amp; securely store all of your important accounts login info and details on your own servers thereby guaranteeing highest level of security and discretion 😏. LaraPass v1 is build using the amazing Laravel PHP Framework (v5.7) and the beautiful, responsive UI is powered by the Argon Library (@CreativeTim) using Bootstrap 4, HTML5, CSS3 &amp; VueJS.</p>
+                        <hr>
+                        <p><a name="features"></a></p>
+                        <h2>Features</h2>
+                        <p><strong>LaraPass v1</strong> comes with a plethora of features right out of the box. Some of the features are listed below:</p>
+                        <p><strong><code>For Users</code></strong></p>
+                        <ul>
+                        <li>Folder Protection - Add additional password for extra protection of each Folder.</li>
+                        <li>Folder Icons - Add different icons to folders.</li>
+                        <li>PWNED Validation - Passwords are checked againt known compromised passwords and rejected if found compromised.</li>
+                        <li>Account Notes - Add secure encrypted notes to each individual account.</li>
+                        <li>Breadcrumbs - For easier navigation throughout the website.</li>
+                        <li>Two Factor Authentication System (using Google Authenticator) for increased Security.</li>
+                        <li>Get notified via Email whenever you log in from a new device.</li>
+                        <li>Secure Vault Storage - Store accounts securely in vault (fully encrypted using multi-level AES-256 bit encryption system).</li>
+                        <li>Password Generator - Custom build Password Generator to generate strong, highly secured password strings with just one-click.</li>
+                        <li>Beautiful and responsive layout for immersive user experience.</li>
+                        <li>Easily copy account details with just one-click.</li>
+                        <li>Folders - Allows users to organize logins in separate folders to avoid any unnecessary confusion.</li>
+                        <li>Quick Notes - Add important notes on the dashboard itself.</li>
+                        <li>Accounts Exporter - Can decrypt and export all the accounts the user has added with one-click.</li>
+                        <li>Receive Custom Emails for Verification, Welcome, Password Reset, New Device Login.</li>
+                        </ul>
+                        <p><strong><code>For Admins</code></strong></p>
+                        <ul>
+                        <li><code>New</code> Custom Account Categories.</li>
+                        <li>Privacy Policy Page - Build-in Privacy Page.</li>
+                        <li>Terms of Service Page - Build-in Terms Page.</li>
+                        <li>Search, Sort &amp; Pagination - Users table real-time live search, sort and paginated results.</li>
+                        <li>Breadcrumbs - For easier navigation through admin settings and menu.</li>
+                        <li>LaraPass v1 Installer included for simple few clicks installation experience.</li>
+                        <li>LaraPass v1 Updater helps keep your application up-to-date with latest updates automatically.</li>
+                        <li>LaraPass v1 Backup Manager - You can now take full backup of your application (files + db) with just 1 click.</li>
+                        <li>Private Mode - Admins can set their applications to Private which disables public registraions.</li>
+                        <li>Maintenance Mode - Admins can activate Maintenance Mode with Custom messages.</li>
+                        <li>Overview - Get quick stats of the app performance.</li>
+                        <li>Easily Update Application Settings (Name, Logo, Favicon, Email, Privacy/TOS Links, etc) from the Admin Menu.</li>
+                        <li>Cookie Consent - In compliance with EU Laws, LaraPass v1 will take consent from the user for storing cookies.</li>
+                        <li>Easily Update Mailer Settings (for Transactional Emails) from the Admin Menu.</li>
+                        <li>User Profiles - Add, View, Update, Ban or Delete Users.</li>
+                        <li>Ability to Verify Support PIN when comminicating with the User via Chat/Email, etc.</li>
+                        <li>Logs user's ip, user agent, login time, logout time and also sends email on successfuly login.</li>
+                        <li>Admins can make quick announcement that is displayed on the dashboard itself.</li>
+                        <li>Run Laravel Artisan Commands for Clearing Cache/View/Routes/Config/Compiled-Files with just one-click from within the admin dashboard.</li>
+                        </ul>
+                        <hr>
+                        <p><a name="credits"></a></p>
+                        <h2>Credits</h2>
+                        <p><strong>LaraPass v1</strong> uses internally some open-source third-party libraries/packages, many thanks to the web community:</p>
+                        <ul>
+                        <li><strong><code><a href="https://github.com/techtailor" target="_blank">TeachTailor</a>   </code></strong> - Lead Developer.</li>
+                        <li><strong><code>Laravel</code></strong> - Open source full-stack framework.</li>
+                        <li><strong><code>Creative Tim</code></strong> - Awesome people, thanks for Argon library.</li>
+                        <li><strong><code>Bootstrap 4</code></strong> - Open source front end framework.</li>
+                        <li><strong><code>Vue</code></strong> - The Progressive JavaScript Framework.</li>
+                        <li><strong><code>techtailor/rpg</code></strong> - Random Password Generator &amp; Encrypter for Laravel.</li>
+                        <li><strong><code>github.com/spatie</code></strong> - Absolutely love the amazing people at <b>Spatie</b></li>
+                        <li><strong><code>pragmarx/google2fa</code></strong> - Google TwoFactor Authentication Library.</li>
+                        <li><strong><code>maatwebsite/excel</code></strong> - Supercharged Excel exports and imports in Laravel.</li>
+                        <li><strong><code>Font-Awesome Icons</code></strong> - Beautiful icons for app and folders.</li>
+                        </ul>
+                        <hr>
+                        <p><a name="contribute"></a></p>
+                        <h2>Contribute</h2>
+                        <p><strong>LaraPass v1</strong> <strong>Docs</strong> are designed to guide our users through the installation process and help inform them of all the amazing features that <strong>LaraPass v1</strong> offers in detail. If you think there is anything missing in the docs, or you could make it more readable and better understandable for others, then visit the github page below and start contributing. Any contribution would be much appreciated &amp; fully credited.</p>
+                        <blockquote>
+                        <p>{primary} <strong>LaraPass v1 Docs Page</strong> <a href="https://github.com/LaraPass/LaraPass-v1-docs-html"><strong><code>https://github.com/LaraPass/LaraPass-v1-Docs-HTML</code></strong></a></p>
+                        </blockquote>
+					</div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>

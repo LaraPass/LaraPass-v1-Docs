@@ -1,0 +1,220 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>cPanel Installation Guide - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="cpanel.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                                <h2>Get Started</h2>
+                                <ul>
+                                    <li><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li><a href="changelog.html">Changelog</a></li>
+                                    <li><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li class="is-active"><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+		            </div>
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>cPanel Installation Guide</h1>
+                        <p>LaraPass v1 Installation Guide for cPanel powered Shared/VPS Hosting Servers.</p>
+                        <hr>
+                        <ul>
+                            <li><a href="#downloading">Downloading</a></li>
+                            <li><a href="#setup_cpanel">Setup cPanel</a></li>
+                            <li><a href="#uploading">Uploading</a></li>
+                            <li><a href="#setup_database">Setup Database</a></li>
+                            <li><a href="#installing">Installing</a></li>
+                        </ul>
+                        <p><a name="downloading"></a></p>
+                        <h2>Downloading</h2>
+                        <p>Download all the files you get after purchasing <strong>LaraPass v1</strong> from <strong><code>CodeCanyon</code></strong> (Envato). </p>
+                        <blockquote>
+                            <p>{primary} Keep the License File (with License/Purchase Code) safely as you will need it to <code>activate</code> LaraPass v1. </p>
+                        </blockquote>
+                        <p>Extract all the files into a safe location. Also extract the <strong><code>laravel_source</code></strong> zip_file into a folder (it contains all the main files we will be uploading to our server).</p>
+                        <hr>
+                        <p><a name="setup_cpanel"></a></p>
+                        <h2>Setup cPanel</h2>
+                        <p>Open cPanel in your browser, usually available at the url address <strong><code>yourdomain.com:2082</code></strong> .</p>
+                        <p>Navigate to your <strong><code>Domains</code></strong>, <strong><code>Addon Domains</code></strong> or <strong><code>Sub-domains</code></strong> depending on which type of domain you want to install LaraPass v1 on. For this example we will be using a sub-domain, so click on the Sub-Domains Page in your cPanel (the proceedure is almost same for all types of domains).</p>
+                        <p><img src="img/screenshots/installation/cpanel_sub.png" alt="screenshot"></p>
+                        <ul>
+                            <li>
+                                <p><strong>Pick a new subdomain, in our case,</strong> <strong><code>demo</code></strong></p>
+                            </li>
+                            <li>
+                                <p><strong>Select the domain name, in our case,</strong> <strong><code>LaraPass v1.net</code></strong></p>
+                            </li>
+                            <li>
+                                <p><strong>Document Root -</strong> <strong><code>LaraPass v1/public</code></strong> (remove the default document root that pops up)</p>
+                            </li>
+                            <li>
+                                <p><strong>Click</strong> <strong><code>Create</code></strong></p>
+                            </li>
+                        </ul>
+                        <p><img src="img/screenshots/installation/cpanel_sub_added.png" alt="screenshot"></p>
+                        <blockquote>
+                            <p>{info} <em>Becareful - LaraPass v1 app should always be placed in or point towards a directory in the root/home directory of your server and not be accessible using the publicly available directory</em></p>
+                        </blockquote>
+                        <hr>
+                        <p><a name="uploading"></a></p>
+                        <h2>Uploading</h2>
+                        <p>Open File Manager in cPanel or login to your server using an FTP program such as FileZilla or CyberDuck.</p>
+                        <p>Navigate to the LaraPass v1 directory and open it (should be present in the root or home directory).</p>
+                        <p><img src="img/screenshots/installation/cpanel_LaraPass v1.png" alt="screenshot"></p>
+                        <p>Upload all the files &amp; folders you got from the <strong><code>laravel_source</code></strong> zip_file into the server directory.</p>
+                        <blockquote>
+                        <p>{warning} <em>Becareful not to miss any file or interrupt when uploading to server.</em></p>
+                        </blockquote>
+                        <p><img src="img/screenshots/installation/cpanel_lp.png" alt="screenshot"></p>
+                        <hr>
+                        <p><a name="setup_database"></a></p>
+                        <h2>Setup Database</h2>
+                        <p>Open MySQL Databases in your cPanel.</p>
+                        <ul>
+                            <li><strong>Create a new database.</strong></li>
+                        </ul>
+                        <p><img src="img/screenshots/installation/cpanel_mysqldb.png" alt="screenshot"></p>
+                        <ul>
+                            <li><strong>Create a new user (with a unique password).</strong></li>
+                        </ul>
+                        <p><img src="img/screenshots/installation/cpanel_mysqlusers.png" alt="screenshot"></p>
+                        <ul>
+                            <li><strong>Add the newly created user to the LaraPass v1 database and</strong></li>
+                        </ul>
+                        <p><img src="img/screenshots/installation/cpanel_mysqldbuser.png" alt="screenshot"></p>
+                        <ul>
+                            <li><strong>add ALL PRIVILIGES to that user.</strong></li>
+                        </ul>
+                        <p><img src="img/screenshots/installation/cpanel_mysqluserpriv.png" alt="screenshot"></p>
+                        <blockquote>
+                        <p>{success} Note down the <code>Database Name</code>, <code>Username</code> and <code>Password</code> to be used in the next step for Installation.</p>
+                        </blockquote>
+                        <hr>
+                        <p><a name="installing"></a></p>
+                        <h2>Installing LaraPass v1</h2>
+                        <p>Follow the instructions <a href="installation.html#installing"><strong>here</strong></a></p>
+                        <hr>
+					</div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>

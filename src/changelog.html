@@ -1,0 +1,207 @@
+﻿<!doctype html>
+<html>
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>LaraPass v1 Changelog - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="changelog.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                                <h2>Get Started</h2>
+                                <ul>
+                                    <li><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li class="is-active"><a href="changelog.html">Changelog</a></li>
+                                    <li><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+		            </div>
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>LaraPass v1 Changelog</h1>
+                        <p>All changes made in LaraPass v1 releases are recorded here.</p>
+                        <larecipe-badge type="success">Added</larecipe-badge>
+                        <larecipe-badge type="warning">Updated</larecipe-badge>
+                        <larecipe-badge type="danger">Fixed</larecipe-badge>
+                        <hr>
+                        <ul>
+                        <li><a href="#1.4.2">v1.4.2</a></li>
+                        <li><a href="#1.4.1">v1.4.1</a></li>
+                        <li><a href="#1.4.0">v1.4.0</a></li>
+                        <li><a href="#1.3.0">v1.3.0</a></li>
+                        <li><a href="#1.2.1">v1.2.1</a></li>
+                        <li><a href="#1.2.0">v1.2.0</a></li>
+                        <li><a href="#1.1.5">v1.1.5</a></li>
+                        <li><a href="#1.1.0">v1.1.0</a></li>
+                        <li><a href="#1.0.2">v1.0.2</a></li>
+                        <li><a href="#1.0.1">v1.0.1</a></li>
+                        <li><a href="#1.0.0">v1.0.0</a></li>
+                        </ul>
+                        <p><a name="1.4.2"></a></p>
+                        <h2>Version <strong><code>1.4.2</code></strong> | 03-Jul-2020</h2>
+                        <larecipe-card><larecipe-badge type="success">Added</larecipe-badge> Login/Register Page Background Header Color Options in Admin Settings.<br><larecipe-badge type="success">Added</larecipe-badge> Inner Pages Background Header Color Options in Admin Settings.<br><larecipe-badge type="warning">Fixed</larecipe-badge> Minor Typos.<br></larecipe-card>
+                        <hr>
+                        <p><a name="1.4.1"></a></p>
+                        <h2>Version <strong><code>1.4.1</code></strong> | 02-Jul-2020</h2>
+                        <larecipe-card><larecipe-badge type="success">Added</larecipe-badge> Application URL input option in Admin Settings.<br><larecipe-badge type="success">Added</larecipe-badge> reCaptch Setup Incomplete Alert on Registration Page.<br><larecipe-badge type="warning">Fixed</larecipe-badge> Minor Typos.<br></larecipe-card>
+                        <hr>
+                        <p><a name="1.4.0"></a></p>
+                        <h2>Version <strong><code>1.4.0</code></strong> | 01-Sep-2019</h2>
+                        <larecipe-card><larecipe-badge type="success">Added</larecipe-badge> Ignition Error Handler by Facade. Now debug and test the LaraPass v1 App with beautifully represented &amp; detailed error pages.<br><larecipe-badge type="success">Added</larecipe-badge> Database variables to the settings file. Can now be changed after installation from the Admin menu.<br><larecipe-badge type="success">Added</larecipe-badge> User Deletion. Users can now mark their account for deletion.<br><larecipe-badge type="success">Added</larecipe-badge> Email Notifications - Users will now get email notifications for - Marking Account for Deletion, Cancelling Account Deletion, Exporting Accounts, Promoting/Demoting Users.<br><larecipe-badge type="success">Added</larecipe-badge> Ability to Promote/Demote Users to/from Admin Status.<br><larecipe-badge type="success">Added</larecipe-badge> Ability to change Application Environment from Admin Settings Page (Local Mode Enables Debugging).<br><larecipe-badge type="success">Added</larecipe-badge> Pop-up confirmation when deleting Quick/Account Notes.<br><br><larecipe-badge type="warning">Updated</larecipe-badge> Icons on the Dashboard and Account Cards.<br><br><larecipe-badge type="danger">Fixed</larecipe-badge> Caching issue with the Installer.<br></larecipe-card>
+                        <hr>
+                        <p><a name="1.3.0"></a></p>
+                        <h2>Version <strong><code>1.3.0</code></strong> | 15-Aug-2019</h2>
+                        <larecipe-card><larecipe-badge type="success">Added</larecipe-badge> Google Invisible reCAPTCHA - Additional layer of protection from bots.<br><larecipe-badge type="success">Added</larecipe-badge> Custom Categories - Now Add, Delete, Activate &amp; Deactivate your own custom categories.<br><larecipe-badge type="success">Added</larecipe-badge> Custom Error Pages.<br><larecipe-badge type="success">Added</larecipe-badge> Ability to disable 2-Step without the Google Authenticator App.<br><larecipe-badge type="success">Added</larecipe-badge> Ability to change the default membership name from Admin Settings.<br><larecipe-badge type="success">Added</larecipe-badge> Ability to remove ban/un-ban a user account that has been banned but not permanently deleted.<br><larecipe-badge type="success">Added</larecipe-badge> Check for PHP Zip Extension during installation.<br><br><larecipe-badge type="warning">Updated</larecipe-badge> Account export option now disabled unless you have at-least 1 account in the vault.<br><larecipe-badge type="warning">Updated</larecipe-badge> Account export file - added header row for better display of exported data. <br><larecipe-badge type="warning">Updated</larecipe-badge> Accounts inside protected folders now display a hidden message when exported.<br><larecipe-badge type="warning">Updated</larecipe-badge> User Profile - added validation check on date of birth to prevent users from selecting a future date.<br><larecipe-badge type="warning">Updated</larecipe-badge> Privacy &amp; Terms page to reflect user's domain accurately.<br><br><larecipe-badge type="danger">Fixed</larecipe-badge> Mobile Navbar Avatar display issue.<br><larecipe-badge type="danger">Fixed</larecipe-badge> Bug preventing "Add New Account" modal from appearing inside a folder.<br><larecipe-badge type="danger">Fixed</larecipe-badge> A UI Bug with Account View Modal.<br><larecipe-badge type="danger">Fixed</larecipe-badge> Site logo in hamburger (mobile) menu.<br><larecipe-badge type="danger">Fixed</larecipe-badge> A few typos.<br><larecipe-badge type="danger">Removed</larecipe-badge> PWND Validator. Developing an in-house API for better control over validations. Will re-introduce once ready. <br></larecipe-card>
+                        <hr>
+                        <p><a name="1.2.1"></a></p>
+                        <h2>Version <strong><code>1.2.1</code></strong> | 11-Feb-2019</h2>
+                        <larecipe-card><larecipe-badge type="danger">Fixed</larecipe-badge> Privacy &amp; Terms Page Links Issue on Login/Register Page. <br><larecipe-badge type="danger">Fixed</larecipe-badge> A typo in the Auto Updater File (Requires users to manually update LaraPass v1 to v1.2.1 to fix it). <br></larecipe-card>
+                        <hr>
+                        <p><a name="1.2.0"></a></p>
+                        <h2>Version <strong><code>1.2.0</code></strong> | 05-Feb-2019</h2>
+                        <larecipe-card><larecipe-badge type="success">Added</larecipe-badge> Account Notes - Encrypted secure notes for each individual account. <br><larecipe-badge type="success">Added</larecipe-badge> Breadcrumbs - For easy navigation throughout the application. <br><larecipe-badge type="success">Added</larecipe-badge> Password Protection for Folders - Additional password protection for individual folders. <br><larecipe-badge type="success">Added</larecipe-badge> Privacy Policy Page - Use the build-in privacy policy page by selecting default in settings. <br><larecipe-badge type="success">Added</larecipe-badge> Terms of Service Page - Use the build-in terms of service page by selecting default in settings. <br><larecipe-badge type="success">Added</larecipe-badge> Icons for Folders - Folders can be further distinguished using unqiue font-awesome icons. <br><larecipe-badge type="success">Added</larecipe-badge> PWNED Validator - Checks and validates passwords against known compromised keywords and blocks the use of any password that has been compromised a minimum number of times. <br><br><larecipe-badge type="warning">Updated</larecipe-badge> Admin Overview Page - Added Search, Pagination &amp; Sorting to the User's Table. <br><larecipe-badge type="warning">Updated</larecipe-badge> Auto-Updater - Updated settings in accordance with v1.2.0. <br><br><larecipe-badge type="danger">Fixed</larecipe-badge> Reported issue of user quick menu not displaying as intended on the Dashboard page. <br><larecipe-badge type="danger">Fixed</larecipe-badge> Reported error when visiting /logout route as a guest user. <br><larecipe-badge type="danger">Fixed</larecipe-badge> Reported issue of the error handler throwning sensitive app info when debugging (limited to local/debug-on environments). <br></larecipe-card>
+                        <hr>
+                        <p><a name="1.1.5"></a></p>
+                        <h2>Version <strong><code>1.1.5</code></strong> | 28-Jan-2019</h2>
+                        <larecipe-card><larecipe-badge type="warning">Updated</larecipe-badge> LaraPass v1 Auto-Updater - Prep for v1.2.0 Release and auto-update process. <br><br></larecipe-card>
+                        <hr>
+                        <p><a name="1.1.0"></a></p>
+                        <h2>Version <strong><code>1.1.0</code></strong> | 08-Nov-2018</h2>
+                        <larecipe-card><larecipe-badge type="success">Added</larecipe-badge> Maintenance Mode with Custom Messages. <br><larecipe-badge type="success">Added</larecipe-badge> Update Manager - One-Click Tool for easy LaraPass v1 Updates. <br><larecipe-badge type="success">Added</larecipe-badge> BackUp Manager - Take full system backups periodically (stored locally). <br><larecipe-badge type="success">Added</larecipe-badge> Private Mode - You can now set your app to Private Mode. Only admin can create new users in Private Mode. <br><larecipe-badge type="success">Added</larecipe-badge> Admins can now add users directly from the Admin Overview Page. Supplements the Private Mode. <br><larecipe-badge type="success">Added</larecipe-badge> Mailer Settings - You can now setup your mailer (for transactional emails) from the Admin Settings page. <br><larecipe-badge type="success">Added</larecipe-badge> Cookie Consent - Users will be asked to consent for storing cookies (in compliance of EU Laws). <br><br><larecipe-badge type="warning">Updated</larecipe-badge> Admin can now permanantly delete users' (need to Ban them first). <br><larecipe-badge type="warning">Updated</larecipe-badge> Admin Overview Page now displays the User's "Email Verified At" Column. <br><larecipe-badge type="warning">Updated</larecipe-badge> Rearranged Admin Overview &amp; Settings Page. <br><br><larecipe-badge type="danger">Fixed</larecipe-badge> Default Admin account not displaying avatar. <br><larecipe-badge type="danger">Fixed</larecipe-badge> IP Logs page issue for Admin User. <br><larecipe-badge type="danger">Fixed</larecipe-badge> A license file issue. <br></larecipe-card>
+                        <hr>
+                        <p><a name="1.0.2"></a></p>
+                        <h2>Version <strong><code>1.0.2</code></strong> | 06-Nov-2018</h2>
+                        <larecipe-card><larecipe-badge type="danger">Fixed</larecipe-badge> A bug that was preventing encrypted Support PIN save.  <br><larecipe-badge type="danger">Fixed</larecipe-badge> An issue with Mailer Settings.
+                        </larecipe-card>
+                        <hr>
+                        <p><a name="1.0.1"></a></p>
+                        <h2>Version <strong><code>1.0.1</code></strong> | 31-Oct-2018</h2>
+                        <larecipe-card><larecipe-badge type="danger">Fixed</larecipe-badge> A bug that was preventing system settings from being saved correctly
+                        </larecipe-card>
+                        <hr>
+                        <p><a name="1.0.0"></a></p>
+                        <h2>Version <strong><code>1.0.0</code></strong>  | 30-Oct-2018</h2>
+                        <larecipe-card><larecipe-badge type="default">Initial</larecipe-badge> Release on Codecanyon
+                        </larecipe-card>
+                        <hr>
+					</div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>

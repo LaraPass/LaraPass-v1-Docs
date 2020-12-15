@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Installation - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="installation.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                            <h2>Get Started</h2>
+                                <ul>
+                                    <li><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li><a href="changelog.html">Changelog</a></li>
+                                    <li><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li class="is-active"><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+		            </div>
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>Installation</h1>
+                        <p>Installing LaraPass v1 on your provisioned server.</p>
+                        <hr>
+                        <ul>
+                            <li><a href="#downloading">Downloading</a></li>
+                            <li><a href="#uploading">Uploading</a></li>
+                            <li><a href="#installing">Installing</a></li>
+                        </ul>
+                        <p><a name="downloading"></a></p>
+                        <h2>Downloading</h2>
+                        <p>Download all the files (in .zip form) from <strong><code><a href="https://github.com/LaraPass/LaraPass-v1" target="_blank">https://github.com/LaraPass/LaraPass-v1</a></code></strong> or 
+                            <br/>
+                            open git bash and run <strong><code>git clone git@github.com:LaraPass/LaraPass-v1.git</code></strong> </p>
+                        <hr>
+                        <p><a name="uploading"></a></p>
+                        <h2>Uploading</h2>
+                        <p>Open connection to your server using <strong><code>Bitvise SSH Client</code></strong> or <strong><code>CyberDuck</code></strong></p>
+                        <p>Navigate to your website directory under <strong><code>webapps</code></strong></p>
+                        <p>Upload all the files &amp; folders you got from the <strong><code>github repo</code></strong> into the server directory.</p>
+                        <blockquote>
+                            <p>{warning} <em>Becareful not to miss any file or interrupt when uploading to server.</em></p>
+                        </blockquote>
+                        <hr>
+<p><a name="installing"></a></p>
+<h2>Installing</h2>
+<p><strong><code>LaraPass v1</code></strong> comes with a simple installer out of the box which helps you to easily install <strong><code>LaraPass v1</code></strong> on any server with just few clicks. However, if you are using a cPanel/Plesk based server, you should refer to our <a href="cpanel.html"><strong><code>cPanel Installation Guide</code></strong></a> before proceeding with installation.</p>
+<p><strong>Step # 1 -</strong> Navigate to</p>
+<pre><code class="language-php"> yourdomain.com/admin/install</code></pre>
+<p>(or if your domain name has not yet propagated, you can use your server ip address instead)</p>
+<pre><code class="language-php"> server-ip-address/admin/install</code></pre>
+<blockquote>
+<p>{info} It is recommended that you wait for your domain name dns to propagate and use <code>yourdomain.com/admin/install</code> route for installing.</p>
+</blockquote>
+<p><strong>Step # 2 -</strong> If the Requirement Checks Pass, Click on <strong><code>Next</code></strong> to proceed.</p>
+<p><strong>Step # 3 -</strong> Enter your License/Purchase Code and your Envato/Codecanyon Username &amp; Click on <strong><code>Verify</code></strong></p>
+<p><strong>Step # 4 -</strong> Our license box will verify your <strong><code>LaraPass v1</code></strong> License and respond accordingly. If successful, you will get the success message and the option to <strong><code>Proceed</code></strong>, if license check failed, you will get an appropriate error and you can try again.</p>
+<p><strong>Step # 5 -</strong> <strong><em><code>Most Important</code> Setting up your Environment File. If you are familiar with Laravel .env files, you can make any changes you like, however, if you are not, then only change the Fields shown below :</em></strong></p>
+<pre><code class="language-php">App Name : Enter Your App Name.
+App Environment : Select Production (if you are running Live) or Local (if you are just testing on local machine).
+App Key : A Unique Key will be generated for your app. Copy and store in a safe place. This key will be used for encrypting/decrypting data, if you lose or change this key later on, it may break the script.
+App Debug : Set to True only if you are running in local environment for testing purpose. For Live servers, keep it False.
+App URL : Your application URL Address.
+Database Hostname : On most servers/machines localhost is the default hostname, if its different for your server then change it.
+Database Port : Same as above, change only if you know your server uses a different port than the default one.
+Database Name : Your Database Name
+Database Username : Your Database Username (name of the user authorized to access your db).
+Database Password : Password You set for the user. (leave it blank for 'null').
+--------------------------------------------------------------------
+Dont change any other options if you dont know how to configure them
+--------------------------------------------------------------------
+For the Mail Options, Check out our guide for setting up Mailgun in the Menu : Miscellaneous -&gt; Mailgun
+--------------------------------------------------------------------
+Mail Driver : log or smtp ('log' for local environment, leave all other mail options as is since they wont matter, 'smtp' for send emails to users)
+Mail Host : smtp.mailgun.org (if using Mailgun for Emails)
+Mail Port : 587
+Mail Username : some-mail@maingul (You will get this id from Mailgun).
+Mail Password : xxxxxxxxxxx (You will get a password from Mailgun).
+Mail Encryption : tls (default)
+Mail From Address : [Use email address that users will receive all emails from].
+Mail From Name : [Name that will shown to users when they receive email from you].
+Mailgun Domain : Your Mailgun API Domain (You will get this from mailgun).
+Mailgun Secret : Your secret key required to access your mailgun api (You will get this from Mailgun).</code></pre>
+<p>Click on <strong><code>Save Env File</code></strong></p>
+<p><strong> Step # 6 -</strong> Once your environment file is saved, you will get the option to <strong><code>Migrate DB</code></strong>, click on it to complete the Database Setup process. If there are any errors, it will return an appropriate message, if not, then it will complete your LaraPass v1 installation.</p>
+<p><strong> Step # 7 -</strong> Finally, it will give you a default <strong><code>username</code></strong> and <strong><code>password</code></strong> for the Admin Account. Go to <strong><code>https://yourdomain.com/login</code></strong> and use the admin credentials to login.</p>
+<pre><code class="language-php ">Default Admin User Details -
+Username : admin
+Password : LaraPass v1@admin</code></pre>
+<p>This completes your LaraPass v1 Installation process. In the next step we will learn more about configuring your app using your custom logo,etc.</p>
+<hr>
+                    
+                    </div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>

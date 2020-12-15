@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Dashboard - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="app-dashboard.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                                <h2>Get Started</h2>
+                                <ul>
+                                    <li><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li><a href="changelog.html">Changelog</a></li>
+                                    <li><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li class="is-active"><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+		
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>Dashboard</h1>
+                        <p>LaraPass v1 Front-end is build using the beautiful, responsive and elegant Argon Library.</p>
+                        <hr>
+                        <ul>
+                            <li><a href="#dashboard">User Dashboard</a></li>
+                        </ul>
+                        <p><a name="dashboard"></a></p>
+                        <h2>User Dashboard</h2>
+                        <p>Upon loggin-in, users are taken to a beautiful Dashboard that elegantly inform the user of his current usage, provides important information, and a quick note feature.</p>
+                        <p><strong><code>Account Usage</code></strong> - User is informed of their usage by the way of showing total no. of accounts, folders and notes they have saved up in the Vault.<br>
+                        <strong><code>Latest Announcement</code></strong> - Users a promptly shown the latest announcement made by the Admin.<br>
+                        <strong><code>Quick Notes</code></strong> -  Users can easily add quick/instants notes for easy reference right on the dashboard itself.<br>
+                        <strong><code>System Info</code></strong> - Users are shown the system clock, their last login IP and when they last logged in.  </p>
+                        <p>Users are also sent <strong><code>Alert Emails</code></strong> whenever they login to their LaraPass v1 account from a different device/location.</p>
+                        <p><img src="img/screenshots/user/dashboard.png" alt="screenshot"></p>
+                        <blockquote>
+                        <p>{primary} We are working on making the dashboard page more informative and as we develop along we will be adding many more detailed statistics and at-a-glance functions for the dashboard page.</p>
+                        </blockquote>
+                        <hr>
+					</div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>

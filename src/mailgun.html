@@ -1,0 +1,206 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Mailgun - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="mailgun.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+             
+                        
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                            <h2>Get Started</h2>
+                                <ul>
+                                    <li><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li><a href="changelog.html">Changelog</a></li>
+                                    <li><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li class="is-active"><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+		            </div>
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>Mailgun</h1>
+                        <p>Setting Up Mailgun to work with your LaraPass v1 installation</p>
+                        <hr>
+                        <ul>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#add">Add Domain</a></li>
+                        <li><a href="#dns">DNS Settings</a></li>
+                        <li><a href="#wait-dns">Wait For DNS</a></li>
+                        <li><a href="#ready">Ready to Use</a> </li>
+                        <li><a href="#credit">Credit</a></li>
+                        </ul>
+                        <p><a name="register"></a></p>
+                        <h2>Register</h2>
+                        <p>Go to <a href="https://refs.spargon.tech/mailgun" target="_blank"><strong><code>www.mailgun.com</code></strong></a> and SignUp for a Free Account.</p>
+                        <blockquote>
+                        <p>{primary} Mailgun Offers <strong><code>10,000 Emails/month</code></strong> for Free and an easy integration. </p>
+                        </blockquote>
+                        <hr>
+                        <p><a name="add"></a></p>
+                        <h2>Add Domain</h2>
+                        <p>In your <strong>Mailgun</strong> Control Panel, go to <strong><code>Domains</code></strong> &amp; then click on <strong><code>Add New Domain</code></strong></p>
+                        <p>Enter a domain you own. Please note that you can use this one domain with many services.</p>
+                        <p>Follow the 4 Steps shown on the page to complete the setup. If you are finding difficulty in following them, then go <a href="https://code.krister.ee/mailgun-digitalocean/" target="_blank"><strong>here</strong></a> for a more detailed guide</p>
+                        <blockquote>
+                        <p>{info} We are using <strong><code>mg.domain.com</code></strong> subdomain just to separate concerns. Its actually easier and more practical to just use your main <strong><code>domain.com</code></strong> instead.</p>
+                        </blockquote>
+                        <p><img src="img/add-domain.gif" alt="screenshot"></p>
+                        <hr>
+                        <p><a name="dns"></a></p>
+                        <h2>DNS Settings</h2>
+                        <p>Now Mailgun should have directed you to the DNS settings page. To find it manually, go to the Domains tab and select your domain. Here's a sample cropped image :</p>
+                        <p><img src="img/add-dns.png" alt="screenshot"><br>
+                        &nbsp;</p>
+                        <h5>Log into DigitalOcean and select the Networking tab on the left.</h5>
+                        <p>&nbsp;</p>
+                        <p><img src="img/do.gif" alt="screenshot">
+                        &nbsp;</p>
+                        <h5>* Select your <strong><code>mydomain.com</code></strong> (no need to create separate subdomain).</h5>
+                        <p>&nbsp;</p>
+                        <h5>* Use the <strong><code>Add record</code></strong> button to add all the necessary information.</h5>
+                        <p>&nbsp; </p>
+                        <p><img src="img/record.gif" alt="screenshot"></p>
+                        <p>&nbsp;  </p>
+                        <h5>Basically you need to convert the Mailgun provided data into this:</h5>
+                        <p><img src="img/converted.png" alt="screenshot"></p>
+                        <h3><strong>Things to notice when entering data</strong></h3>
+                        <ul>
+                        <li>the txt details may need to be in double quotes: <strong><code>v=spf...</code></strong></li>
+                        <li>Domain values need dots at the end (DigitalOcean will tell you this)</li>
+                        <li>the <strong><code>v=spf</code></strong> part needs an <strong><code>@</code></strong> in front, not your domain, as Mailgun instructs.</li>
+                        <li>Mailgun domains use the extension <strong><code>.org!</code></strong></li>
+                        </ul>
+                        <hr>
+                        <p><a name="wait-dns"></a></p>
+                        <h2>Wait for DNS records to update</h2>
+                        <p>Usually this takes about 24 hours. If you're in a hurry you're welcome to go insane with the &quot;Check DNS Records Now&quot; button.</p>
+                        <hr>
+                        <p><a name="ready"></a></p>
+                        <h2>Ready to Use</h2>
+                        <p>You can now configure your LaraPass v1 app to send emails using Mailgun.</p>
+                        <hr>
+                        <p><a name="credit"></a></p>
+                        <h2>Credit</h2>
+                        <p>This Mailgun tutorial was borrowed from <strong><code>Krister Viirsaar</code></strong>. You can check out his original post <a href="https://code.krister.ee/mailgun-digitalocean/" target="_blank"><strong><code>here</code></strong></a></p>
+					</div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>

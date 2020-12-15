@@ -1,0 +1,214 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Basic Setup - LaraPass v1 Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Spargon Technologies Pvt. Ltd.">
+        <meta name="description" content="LaraPass v1 is a self-hosted personal password manager that you can use to store your passwords safely and securely on your own servers. Build with SaaS functionality in mind.">
+        <meta name="keywords" content="LaraPass v1,password manager,last pass,passhub,safe passwords,password vault,encrypt password,secure password, save my password,spargon,techtailor">
+        <meta name="twitter:card" value="summary">
+        <link rel="canonical" href="basic-setup.html">
+        <meta property="og:type" content="article">
+        <link rel="stylesheet" href="vendor/binarytorch/larecipe/assets/css/app.css">
+        <script type="text/javascript">
+            if(localStorage.getItem('larecipeSidebar') == null) {
+                localStorage.setItem('larecipeSidebar', !! 1);
+            }
+        </script>
+        <script src="vendor/binarytorch/larecipe/assets/js/app.js" defer=""></script>
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <style>
+            .btn-primary, .bg-primary, .badge-primary, .btn-primary:hover, .btn-outline-primary:hover, .btn-outline-primary:active, .dropdown-item:active {
+                background-color: #5F4180 !important;
+                border-color: #5F4180 !important;
+            }
+            .btn-outline-primary {
+                border-color: #5F4180;
+            }
+            .documentation h1 {
+                border-left: 2px solid #5F4180 !important;
+            }
+            .btn-outline-primary, .documentation .article h2 a:before, .documentation .article :not(pre)>code, a {
+                color: #5F4180;
+            }
+            .documentation .sidebar>ul>li>ul>li.is-active {
+                border-left: 2px solid #5F4180;
+            }
+            .custom-toggle input:checked+.custom-toggle-slider {
+                border: 1px solid #5F4180;
+            }
+            .custom-toggle input:checked + .custom-toggle-slider::before, .alert-primary, .badge-primary {
+                background: #5F4180;
+            }
+            :not(pre)>code[class*=language-], pre[class*=language-] {
+                border-top: 3px solid #5F4180;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(87deg, #5F4180 0, #9e65e0 100%) !important;
+            }
+            ::-moz-selection {
+                background: #f4f5f7;
+            }
+            ::selection {
+                background: #f4f5f7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="bg-gradient-primary" style="position: sticky; top: 0; z-index: 2333; height: 3px"></div>
+            <larecipe-nav type="white" effect="light" expand="" fixed="" title="LaraPass v1 Docs" style="height: 4rem; top: 3px;">
+                <div slot="brand" style="display: flex; align-items: center;">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="LaraPass v1 Docs logo">
+                    </a>
+                    <larecipe-switch class="mt-2" v-model="sidebar"></larecipe-switch>
+                </div>
+                <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                        LaraPass v1 Docs
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <larecipe-close-button @click="closeMenu"></larecipe-close-button>
+                    </div>
+                </div>
+                <div class="navbar-nav ml-lg-auto">
+                    <larecipe-button slot="title" type="primary" style="width: 100%">
+                        1.4
+                    </larecipe-button>
+                </div>
+            </larecipe-nav>
+            <div class="container-fluid pl-0 documentation is-dark">
+                <div class="row">
+                    <div class="col-12 col-md-3 sidebar " :class="[{'is-hidden': ! sidebar}, {'is-dark': forceDarkSidebar}, {'is-light': forceLightSidebar}]">
+                        <ul>
+                            <li>
+                                <h2>Get Started</h2>
+                                <ul>
+                                    <li><a href="index.html">Overview</a></li>
+                                    <li><a href="introduction.html">Introduction</a></li>
+                                    <li><a href="changelog.html">Changelog</a></li>
+                                    <li class="is-active"><a href="basic-setup.html">Basic Setup</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Installation</h2>
+                                <ul>
+                                    <li><a href="installation.html">Installation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Administration</h2>
+                                <ul>
+                                    <li><a href="admin-overview.html">Overview</a></li>
+                                    <li><a href="admin-settings.html">Settings</a></li>
+                                    <li><a href="admin-manager.html">Manager</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>User Frontend</h2>
+                                <ul>
+                                    <li><a href="app-dashboard.html">Dashboard</a></li>
+                                    <li><a href="app-vault.html">Vault</a></li>
+                                    <li><a href="app-profile.html">Profile</a></li>
+                                    <li><a href="app-security.html">Security</a></li>
+                                    <li><a href="app-support.html">Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Miscellaneous</h2>
+                                <ul>
+                                    <li><a href="cpanel.html">cPanel Installation</a></li>
+                                    <li><a href="recaptcha.html">Google reCaptcha</a></li>
+                                    <li><a href="mailgun.html">Mailgun</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+		            </div>
+                    <div class="col-12 col-md-9 article" :class="{'expanded': ! sidebar}">
+                        <h1>Basic Setup</h1>
+                        <p>Basic Setup required for installing LaraPass v1 on your server.</p>
+                        <hr>
+                        <ul>
+                        <li><a href="#requirements">Requirements</a></li>
+                        <li><a href="#setup">Setup</a></li>
+                        <li><a href="#vps">VPS Server</a></li>
+                        <li><a href="#manager">VPS Manager</a></li>
+                        </ul>
+                        <p><a name="requirements"></a></p>
+                        <h2>Requirements</h2>
+                        <ul>
+                            <li>NGINX or Apache</li>
+                            <li>MySQL or MariaDB</li>   
+                            <li>SSH Access (Recommended)</li>
+                        </ul>
+                        <hr>
+                        <p><a name="setup"></a></p>
+                        <h2>Setup</h2>
+                        <blockquote>
+                        <p>{primary} <strong>LaraPass v1</strong> works best on a <code>VPS</code> with SSH Access. </p>
+                        </blockquote>
+                        <p>Below are some of the reputable and amazingly cheap VPS Providers -</p>
+                        <p><strong>
+                        <a href="https://refs.spargon.tech/digital-ocean" target="_blank">Digital Ocean</a>, <a href="https://refs.spargon.tech/vultr" target="_blank">Vultr</a>, <a href="https://refs.spargon.tech/aws" target="_blank">Amazon AWS</a>
+                        </strong></p>
+                        <p>Since these VPS provide raw server with resources, we will need a server manager to run our PHP applications such as LaraPass v1. Some of the suggested are - </p>
+                        <p><strong>
+                        <a href="https://refs.spargon.tech/ploi" target="_blank">Ploi</a>, <a href="https://refs.spargon.tech/runcloud" target="_blank">RunCloud</a>, <a href="https://refs.spargon.tech/forge" target="_blank">Laravel Forge</a>, <a href="https://refs.spargon.tech/cloudways" target="_blank">Cloudways</a>
+                        </strong></p>
+                        <p>All of these service have slightly different pricing and features, so you can check them out and decide for your self. For our demo, we will be using our best setup &amp; most for our money i.e., <strong><a href="https://refs.spargon.tech/digital-ocean" target="_blank">Digital Ocean</a></strong> with <strong><a href="https://refs.spargon.tech/ploi" target="_blank">Ploi</a></strong>.</p>
+                        <p>We also recommend downloading &amp; installing <strong><code>Bitvise SSH Client</code></strong> or any other of your choice so you can connect to your server easily.</p>
+                        <blockquote>
+                        <p>{warning} <em>While it will work, we do not recommend running <strong>LaraPass v1</strong> using Shared Hosting as Shared servers are not Secure and may create issues down the line.</em></p>
+                        </blockquote>
+                        <p>If you are still interested in using the cheaper Shared Hosting services, then we recommend using <a href="https://refs.spargon.tech/a2-hosting" target="_blank"><strong><code>A2Hosting</code></strong></a> and use coupon code <strong><code>SOFAST!</code></strong> for 51% Off.</p>
+                        <p><a href="https://refs.spargon.tech/a2-hosting" target="_blank"><img src="accounts/default1/banners/b33b2977.png" alt="img"></a></p>
+                        <blockquote>
+                        <p>{success} Visit the <a href="cpanel.html"><code>cPanel Installation Guide Page</code></a> for details on how to successfully install LaraPass v1 on cPanel.</p>
+                        </blockquote>
+                        <hr>
+                        <p><a name="vps"></a></p>
+                        <h2>VPS Server</h2>
+                        <p>Setting up a VPS server provided by <a href="https://refs.spargon.tech/digital-ocean" target="_blank"><strong><code>Digital Ocean</code></strong></a> or any other from the above list is very simple and straight forward. These steps are general and are not specific to <strong>LaraPass v1</strong>. If you already know how to provision a DO server, then just skip this section. If you are using <a href="../en/index.htm?id=94888"><strong>Cloudways</strong></a>, then you don't need to register at DO, they will handle everything (albeit at an extra premium).</p>
+                        <p><strong>Step # 1 -</strong> Visit <a href="https://refs.spargon.tech/digital-ocean" target="_blank"><strong><code>DigitalOcean.com</code></strong></a><br>
+                        <strong>Step # 2 -</strong> Create an account. Use coupon/promo code <strong><code>DO10</code></strong> to get Free Credit to Launch your first server.<br>
+                        <strong>Step # 3 -</strong> Go to <strong><code>Create Droplets</code></strong>. Select Distritutions/OS as <strong><code>Ubuntu 18.04 x64</code></strong>.<br>
+                        <strong>Step # 4 -</strong> Select any size as per your budget, we recommend the <strong><code>$10/mo - 2GB Droplet Size</code></strong> &amp; Select a <strong><code>region</code></strong> as per your desire.<br>
+                        <strong>Step # 5 -</strong> Choose a <strong><code>Hostname</code></strong> and Click <strong><code>Create</code></strong> and wait for the server to get provisioned.<br>
+                        <strong>Step # 6 -</strong> Once the server is provisioned, you will get an Email with the Server IP &amp; the root password.<br>
+                        <strong>Step # 7 -</strong> If you haven't already, then you need to point your Domain Nameservers to DigitalOcean.<br>
+                        <strong>Step # 8 -</strong> Go to <strong><code>Networking -&gt; Domains</code></strong> and Add your Domain.<br>
+                        <strong>Step # 9 -</strong> Lastly, create 2 new records for your domain as listed below:</p>
+                        <pre><code class="language-php"> Hostname : @
+                        Will direct to : your-server-ip-address
+                        TTL : 1800
+
+                        Hostname : www
+                        Will direct to : your-server-ip-address
+                        TTL : 1800</code></pre>
+                        <hr>
+                        <p><a name="manager"></a></p>
+                        <h2>VPS Manager</h2>
+                        <p>A VPS always comes as a barebones pc, as such in order to run web applications or websites on them we need to use a VPS Manager. For <strong>LaraPass v1</strong> we will be going with <a href="../register.html?referrer=GTVyGH2vz2N3tN84XxW7"><strong>Ploi</strong></a> because unlike others, it comes with a Free Option (along with Free SSL) which allows you to manage your LaraPass v1 site for <strong><code>Free</code></strong>. For more details visit <a href="../register.html?referrer=GTVyGH2vz2N3tN84XxW7"><strong>Ploi.io</strong></a>. These steps are general and not specific to <strong>LaraPass v1</strong>. If you already know how to link your VPS with a Manager, then just skip this section.</p>
+                        <p><strong>Step # 1 -</strong> Go to <a href="https://refs.spargon.tech/ploi" target="_blank"><strong><code>Ploi.io</code></strong></a> &amp; Sign Up.<br>
+                        <strong>Step # 2 -</strong> Click on <strong><code>Create Server</code></strong>.<br>
+                        <strong>Step # 3 -</strong> Click on <strong><code>Custom VPS</code></strong> under Select Provider.<br>
+                        <strong>Step # 4 -</strong> Copy the <strong><code>Command</code></strong> shown under <code>"You can also use this one-liner to add the authorized key:"</code>, its something like this - (do not copy the command below, its just a dummy one)</p>
+                        <pre><code class="language-php">mkdir -p /root/.ssh &amp;&amp; touch /root/.ssh/authorized_keys &amp;&amp; echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6BBCdgfd/8FblBAwAuZYFQti4xOub2BxlMMwjMajI+JM91bD81B6xBA19gBTrc194SuoD1L/T7tna66XQsBUchC2YBF/akdwyyduSBJh/yK98JCMNZyNcE0qZ/g9MhCfkYI3ZkFLOeoTYsDEUpkzNKePu9r6egBSFQj0TGNAKyZ3wohnM469CoCS0Jh6kbOOa+kp7OLr0jXRY5l7f8MCEjPcVldkYFhXhxIFQ6GZnGdnayqnlBVRpN4/4q1X+HTsMOWKcTtJembJ8wThaKnAUhsZjNOitD9edhsDu+K9JeZU8egnP8tz28i+8pFcuPykoeqUJOCgMCiuHuvMhu2iL ploi-worker" &gt;&gt; /root/.ssh/authorized_keys</code></pre>
+                        <p><strong>Step # 5 -</strong> Login to your VPS Server as <strong><code>root</code></strong> using <strong><code>Bitvise SSH Client</code></strong> or <strong><code>CyberDuck</code></strong> or directly from Digital Ocean Server Panel.<br>
+                        <strong>Step # 6 -</strong> <strong><code>Paste</code></strong> the <strong><code>Command</code></strong> you copied in <strong>Step # 4</strong>.<br>
+                        <strong>Step # 7 -</strong> Come back to <strong><code>Ploi</code></strong>, enter your <code>Server Name</code>, <code>IP Address</code>, <code>Select OS</code>, <code>PHP Version as 7.1</code>, <code>MySQL Version as 5.7</code> and click on <strong><code>Create Server</code></strong> and wait for it to provision.<br>
+                        <strong>Step # 8 -</strong> Once done, head over to your server on ploi, click on add sites, add your domain name and in the directory add /public (since its a laravel installation).<br>
+                        <strong>Step # 9 -</strong> All done. Visit the Installation Page to get started with installing LaraPass v1 on your server.</p>
+					</div>
+                </div>
+            </div>
+            <larecipe-back-to-top></larecipe-back-to-top>
+        </div>
+    </body>
+</html>
